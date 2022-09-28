@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>automatic icon change</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="main_container">
+        <div class="child_container">
+            <h1 class="heading">NOW MY MOOD IS ...<span id="cell" class="charging"></span> </h1>   
+        </div>
+    </div>
+
+    <script>
+const cellcharge= () =>{
+    let cell=document.getElementById("cell");
+    cell.innerHTML="&#9785";
+
+    setTimeout(()=>{
+      cell.innerHTML="&#128512"
+    },2000);
+   
+    setTimeout(()=>{
+      cell.innerHTML="&#128513"
+    },4000);
+
+    setTimeout(()=>{
+      cell.innerHTML="&#128518"
+    },6000);
+
+    setTimeout(()=>{
+      cell.innerHTML="&#128514"
+    },8000);
+}
+
+cellcharge();
+setInterval(cellcharge,9000);
+    </script>
+</body>
+</html>
